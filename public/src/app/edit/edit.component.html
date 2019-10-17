@@ -1,0 +1,15 @@
+<div>
+        <form (submit)="edit(author._id, author)">
+            <p>{{ author | json}}</p>
+            <table>
+                <tr>
+                    <td><label>Author Name: </label></td>
+                    <td><input type="text" name="name" value="{{author.name}}" [(ngModel)]="author.name"></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td><input type="submit" value="Add Author"><button [routerLink]="['/display']">Cancel</button></td>
+                </tr>
+            </table> 
+        </form>
+    </div>

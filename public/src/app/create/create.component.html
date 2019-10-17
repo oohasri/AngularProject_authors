@@ -1,0 +1,24 @@
+<div>
+    <div *ngIf="isError">        
+        <h4>{{errors.name.message}}</h4>
+    </div>
+    <form (submit)="onCreate()">
+        <div *ngIf=(!name.valid)>{{ name.errors | json }}</div>
+        <p>{{ author | json}}</p>
+        <table>
+            <tr>
+                <td><label>Author Name: </label></td>
+                <td><input type="text" name="name" 
+                    required 
+                    minlength="3" 
+                    maxlength="10" 
+                    [(ngModel)]="author.name"
+                    #name = "ngModel"></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><input type="submit" value="Add Author"><button [routerLink]="['/display']">Cancel</button></td>
+            </tr>
+        </table> 
+    </form>
+</div>

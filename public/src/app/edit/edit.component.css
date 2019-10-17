@@ -1,0 +1,15 @@
+div{
+    margin: 0px auto;
+    width: 500px;
+    text-align: center
+}
+form {
+    border: 1px solid black;
+    padding: 10px;
+}
+table{
+    margin: 10px auto;
+}
+input{
+    margin: 10px auto;
+}
